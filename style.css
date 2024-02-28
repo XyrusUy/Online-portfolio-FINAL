@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Honk:MORF,SHLN@11,18.9&family=Lilita+One&family=Protest+Guerrilla&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:"Lilita One", sans-serif; 
+}
+html {
+    font-size: 65.5%;
+    overflow-x: hidden;
+}
+body {
+    background: rgba(0, 0, 0, 0.87);
+    color: blue;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 3rem;
+    color: white fontw 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: aliceblue;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a:active {
+    color: blue;
+    border-bottom: 3px solid blue;
+} 
+#menu-icon {
+    font-size: 3.6rem;
+    color: blue;
+    display: none;
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   margin-top: 3rem; 
+}
+span {
+    color: red;
+}
+.logo span{
+    color: yellow;
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+.home-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: inherit;
+    top: 3rem;
+    width: 22vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgb(32, 32, 117);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    box-shadow: 0 0 50px rgb(65, 65, 214),
+    0 0 100px rgb(36, 117, 141);
+
+}
+.home-content p{
+    color: rgb(24, 167, 233);
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 1000px;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid rgb(34, 176, 219);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: rgb(16, 79, 116);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3)translate(-5px);
+    box-shadow: 0 0 25px rgb(7, 96, 148);
+    background-color: rgb(21, 21, 197);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: rgb(25, 159, 212);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgb(26, 211, 218);
+}
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: 'Web Developer';
+    color: blueviolet;
+    animation: words 20s infinite;
+}
+/* .text-animation span::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(31, 174, 218);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps
+    (14) infinite;
+} */
+@keyframes cursor{
+    to{
+        border-left: 2px solid blue;
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content:'Web Developer'
+    }
+    21%,
+    40%{
+        content: "Grapgic Designr";
+    }
+    41%,
+    60%{
+        content: "UI/UX Designer";
+    }
+    61%,
+    80%{
+        content: "Content Manager";
+    }
+    81%,
+    100%{
+        content: "Software Tester";
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: rgba(0, 0, 0, 0);
+    color: whitesmoke;
+}
+.about h2 span{
+    color: rgb(14, 124, 168);
+    text-shadow: 0 0 50px blue;
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px blue;
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 50px rgb(21, 93, 228),
+    0 0 100px rgb(10, 144, 221);
+}
+.heading{
+    color: yellow;
+    text-align: center;
+    font-size: 20px;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 3.5rem;
+    margin:2rem 0 3rem;
+}
+.about-content .text-animation span::before{
+    content: 'Web Developer';
+    color: black;
+    animation: words 20s infinite;
+}
+/* .text-animation span::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(31, 174, 218);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps
+    (14) infinite;
+} */
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(30, 119, 192);
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+    width: 50px;
+}
+.button{
+    display: inline-block;
+    background-color: black;
+    padding: 1rem 5rem;
+    border-radius: 25px;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.button:hover{
+    color: white;
+    background-color: white;
+}
+.services{
+    background-color: rgba(75, 72, 72, 0);
+    color: white;
+}
+.services h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.services-container{
+    display: -moz-grid-line;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    padding-bottom: 200px;
+}
+.service-box{
+    background-color: aqua;
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+}
+.service-box:hover{
+    display: flex;
+    color: red;
+    transform: scale(1.03);
+}
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5em;
+}
+.service-info h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.service-info p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+.bg{
+    background-repeat: no-repeat;
+    background-image: url(calculator.png);
+}
+.contact{
+    background-color: rgba(70, 70, 70, 0);
+    
+}
+.contact h2{
+    margin-bottom: 3rem;
+    color: white;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-box input,
+.contact form ,textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: red;
+    background: black;
+    border-radius: 0.8rem;
+    border: 2px solid blue;
+    margin: 1rem 0;
+    resize: none;
+}
+.contact form btn{
+    margin-top: 2rem;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(126, 126, 126, 0);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: blue;
+}
+.footer .social a{
+    font-size: 25px;
+    color: green;
+    border: 2px solid black;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    background-color: rgba(0, 0, 0, 0);
+    color: blue;
+    box-shadow: 0 0 25px aqua;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: aqua;
+    border-bottom: 3pzx solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+    color: blue;
+    border-bottom: 3px solid gray;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: aqua;
+}
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: black;
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid red;
+        border-bottom: 2px solid blue;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content{
+        font-size: 2.6rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 56vw;
+        margin-top: -2rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 0 2rem 4rem;
+    }
+    .about-img{
+        width: 52vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
